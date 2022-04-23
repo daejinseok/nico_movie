@@ -7,9 +7,10 @@ import Detail from "./routes/Detail";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/nico_movie">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />}></Route>
+        <Route path="home" element={<Home />}></Route>
         <Route path="movie" element={<Detail />}>
           <Route path=":id" element={<Detail />} />
         </Route>
